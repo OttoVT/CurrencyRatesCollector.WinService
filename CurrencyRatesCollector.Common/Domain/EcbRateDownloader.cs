@@ -1,22 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
 namespace CurrencyRatesCollector.Common.Domain
 {
-    public class EcbRateDownloader
+    public class EcbRateDownloader : IRateDownloader
     {
         private static readonly char[] splitter = new[] {'-'};
         public EcbRateDownloader()
         {
         }
 
-
-        public IReadOnlyCollection<Rate> DownloadRates()
+        public Task<IReadOnlyCollection<Rate>> DownloadRates()
         {
             var doc = new XmlDocument();
             doc.Load(@"http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml");
@@ -49,7 +46,7 @@ namespace CurrencyRatesCollector.Common.Domain
                 }
             }
 
-            return rates;
+            return Task.FromResult((IReadOnlyCollection<Rate>)rates);
         }
     }
 }

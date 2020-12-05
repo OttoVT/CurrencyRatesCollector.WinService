@@ -36,13 +36,13 @@ namespace CurrencyRatesCollector.WinService
         {
             WriteToFile("Service is stopped at " + DateTime.Now);
         }
-        private void OnElapsedTime(object source, ElapsedEventArgs e)
+        public void OnElapsedTime(object source, ElapsedEventArgs e)
         {
             WriteToFile("Service is recall at " + DateTime.Now);
 
             try
             {
-                var rates = _ecbRateDownloader.DownloadRates();
+                var rates = _ecbRateDownloader.DownloadRates().GetAwaiter().GetResult();
                 _ratesRepository.AddOrIgnoreAsync(rates).GetAwaiter().GetResult();
 
                 WriteToFile("Service has finished recall at " + DateTime.Now);

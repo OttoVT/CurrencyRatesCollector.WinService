@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRatesCollector.WinS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRatesCollector.Common", "CurrencyRatesCollector.Common\CurrencyRatesCollector.Common.csproj", "{2DDCEFA9-BD7A-4462-B505-971E970938A3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D02F8277-AA08-406F-A7A3-358D8690959C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyRatesCollector.Test", "test\CurrencyRatesCollector.Test\CurrencyRatesCollector.Test.csproj", "{F8866848-AC2C-4963-BBF0-782178ED8F47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{2DDCEFA9-BD7A-4462-B505-971E970938A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DDCEFA9-BD7A-4462-B505-971E970938A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DDCEFA9-BD7A-4462-B505-971E970938A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8866848-AC2C-4963-BBF0-782178ED8F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8866848-AC2C-4963-BBF0-782178ED8F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8866848-AC2C-4963-BBF0-782178ED8F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8866848-AC2C-4963-BBF0-782178ED8F47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F8866848-AC2C-4963-BBF0-782178ED8F47} = {D02F8277-AA08-406F-A7A3-358D8690959C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EEEBDCB5-1D6B-4A75-9514-8066054AE817}
